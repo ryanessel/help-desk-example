@@ -17,7 +17,8 @@ import { useState } from "react";
                              
         <div className="bg-gray-300 py-2 pl-0 px-3 md:flex  xl:flex  text-left items-center justify-between">
 
-            <Link to='/' className="block px-2 py-1 text-black hover:text-gray-400"  > Admin Login
+        {/* only show if logged in */}
+            <Link to='/allTickets' className="block px-2 py-1 text-black hover:text-gray-400"  > Admin Login
             </Link>
 
             

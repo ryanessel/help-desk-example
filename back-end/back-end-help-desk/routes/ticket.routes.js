@@ -6,11 +6,30 @@ router.get("/test", (req, res, next) => {
   res.json("[TEST]Ticket route");
 });
 
+
+
+
 router.get("/ticket", (req, res, next) => {
   Ticket.find()
   .then((allTickets) => res.json(allTickets));
   
 });
+
+
+//GET ROUTE  TICKET DETAILS (ID)
+router.get('/ticket/:ticketId', (req, res, next) => {
+  const { ticketId } = req.params
+
+  if(!mongoose.Types.ObjectId.isValid(ticketId)) {
+      res.status(400).json({message: "Speficied id doesn't exist or isn't valid"})
+      return;
+  }
+
+  Ticket.findById(ticketId)
+      .then(details => res.status(200).json(details))
+      .catch(error => res.json(error))
+
+})
 
 //POST ROUTE- CREATES NEW TICKET IN THE DB PER THE INPUTS
 router.post("/ticket", (req, res, next) => {

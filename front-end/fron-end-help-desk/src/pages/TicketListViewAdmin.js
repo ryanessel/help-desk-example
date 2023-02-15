@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TicketListViewAdmin() {
     const [tickets, setAllTickets] = useState("")
@@ -28,7 +29,7 @@ getAllTickets();
   return (
     <div className="text-xl"> 
 
-    <h1 className='font-size-20'>TicketListViewAdmin</h1>
+    <h1 className='text-3xl underline font-bold mb-5'>Ticket List View (Admin Only)</h1>
     
 
 
@@ -49,7 +50,11 @@ return(
       <td>{theTicket.name}</td>
       <td>{theTicket.email}</td>
       <td>{theTicket.status}</td>
+
+      <Link to={`/ticket/${tickets._id}`}>
       <td>Details</td>
+    </Link>
+     
     </tr>
 
 )

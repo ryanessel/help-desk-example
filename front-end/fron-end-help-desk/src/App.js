@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import IssueATicket from './pages/IssueATicket';
 import TicketListViewAdmin from './pages/TicketListViewAdmin';
+import TicketDetails from './pages/TicketDetails';
 import { Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
 <Route path="/issueTicket" element={<IssueATicket/>}/>
 <Route path="/allTickets" element={<TicketListViewAdmin/>}/>
+<Route path ="/ticket/:ticketId" element={<TicketDetails/>}/>
 
 </Routes>
 
