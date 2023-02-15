@@ -23,3 +23,25 @@ code {
 border: 1px solid black
 
 }
+
+.submitIssue  td {
+
+  border: 1px solid black
+  
+  }
+
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px;
+  }
+
+  .center th, td {
+
+    border: 1px solid black
+  }
+  .center th {
+
+    background-color: azure;
+  }

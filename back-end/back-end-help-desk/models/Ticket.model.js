@@ -20,7 +20,7 @@ const ticketSchema = new Schema(
     },
 
     status: {
-        type: ["New", "In Progress", "Resloved"],
+        type: String,
         defaultOption: 'New',
         required: [true, "Ticket descripion is required"],
       },

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import IssueATicket from './pages/IssueATicket';
+import TicketListViewAdmin from './pages/TicketListViewAdmin';
 import { Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       
 
 <Route path="/issueTicket" element={<IssueATicket/>}/>
-
+<Route path="/allTickets" element={<TicketListViewAdmin/>}/>
 
 </Routes>
 
