@@ -49,11 +49,11 @@ export default function AdminAddUser() {
 
 
     <div>
-              <h1>Sign Up</h1>
+              <h1>Add New Admin User</h1>
  
  <form onSubmit={handleSignupSubmit}>
    <label className="signUpLabel">Email:</label>
-   <input 
+   <input className='border border-black'
      type="email"
      name="email"
      value={email}
@@ -61,7 +61,7 @@ export default function AdminAddUser() {
    />
 
    <label>Password:</label>
-   <input 
+   <input className='border border-black'
      type="password"
      name="password"
      value={password}
@@ -69,7 +69,7 @@ export default function AdminAddUser() {
    />
 
    <label>Name:</label>
-   <input 
+   <input className='border border-black'
      type="text"
      name="name"
      value={name}
@@ -81,8 +81,7 @@ export default function AdminAddUser() {
 
  { errorMessage && <p className="error-message">{errorMessage}</p> }
 
- <p>Already have account?</p>
- <Link to={"/login"}> Login</Link>
+
 
 
     </div>
