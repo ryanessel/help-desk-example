@@ -16,11 +16,13 @@ const defaultFormFields = {
 
 export default function TicketSubmitForm(props) {
 
-    const emailForm = useRef(null);
+    const ticketForm = useRef(null);
 
     const [ formFields, setFormFields ] = useState(defaultFormFields);
     const { name, email, description } = formFields;
     const [successMessage, setSuccessMessage] = useState(undefined);
+    const [failMessage, setFailMessage] = useState(undefined);
+    const [messageSwitch, setMessageSwitch] = useState("")
 
 
     const handleChange = (event) => {
@@ -40,24 +42,28 @@ export default function TicketSubmitForm(props) {
 
         console.log("REQUEST BODY", requestBody)
 
+        if(requestBody.name === "" || requestBody.email === "" || requestBody.description === "" ) {
+            setFailMessage(<div className='bg-red-400 text-center'>Fill out all forms please!</div>);
+            return;
+        }
+
         axios.post(`${API_URI}`, requestBody)
         .then((response) => {
+        
+            setMessageSwitch(response.data);
             console.log("EMAIL RESPONSE!!!!", response)
             setSuccessMessage(<div className='bg-green-400 text-center'>Ticket Sent!</div>);
             resetFormFields();
         })
         .catch((error) => {
+          
             console.log(error);
         })
         
     } 
 
 
-    const handleTouchSubmit = (e) => {
-        e.preventDefault()
 
-        emailForm.current.submit()
-    }
     
     return (
        
@@ -89,8 +95,7 @@ export default function TicketSubmitForm(props) {
          <div className='sign-up-container text-left'>
                 
 
-                <form ref={emailForm} onSubmit={handleContactSubmit}>
-                    <h2>Send me a message</h2>
+                <form ref={ticketForm} onSubmit={handleContactSubmit}>
 
                     <input 
                     type='text' 
@@ -124,7 +129,8 @@ export default function TicketSubmitForm(props) {
 
                     <button className='btn btn-blue' > Submit </button>
 
-                    { successMessage && <h3 className="success-message rounded">{successMessage}</h3> }
+                    { messageSwitch && <h3 className="success-message rounded">{successMessage}</h3> }
+                    { !messageSwitch && <h3 className="success-message rounded">{failMessage}</h3> }
                 </form>
     
 
