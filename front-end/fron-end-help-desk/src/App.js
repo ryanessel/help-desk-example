@@ -19,7 +19,7 @@ function App() {
 
 <Route path="/issueTicket" element={<IssueATicket/>}/>
 <Route path="/allTickets" element={<IsPrivate><TicketListViewAdmin/></IsPrivate>}/>
-<Route path ="/ticket/:ticketId" element={<TicketDetails/>}/>
+<Route path ="/ticket/:ticketId" element={<IsPrivate><TicketDetails/></IsPrivate>}/>
 <Route path="/AdminAddSecretURL" element={<AdminAddUser/>}/>
 </Routes>
 
