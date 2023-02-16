@@ -28,13 +28,13 @@ pic here
 - clicking the details page will let you send that specific user an email about their ticket
 
 4. Send Email page
-![send email](./readmepics/send%20response%20page.png"sending email")
+![send email](./readmepics/send%20response%20page.png "sending email")
 - If you don't put anything in the response to ticket text area you get an error
-![error](./readmepics/error%20send%20response.png"email error")
+![error](./readmepics/error%20send%20response.png "email error")
 - When you send a message succesfully you get the response like in the picutre below
-![success](./readmepics/sucess%20send%20message.png"email success")
+![success](./readmepics/sucess%20send%20message.png "email success")
 - Message with email and user's name is sent to browser console.
-![response check](./readmepics/sucess%20send%20message.png"response check")
+![response check](./readmepics/sucess%20send%20message.png "response check")
 
 
 5. All admin routes are protected and kick you back to the front page with the ticket submission form
