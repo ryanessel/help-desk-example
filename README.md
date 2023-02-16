@@ -46,6 +46,11 @@ pic here
 ![Admin User Added](./readmepics/user%20added.png "Admin User Added")
 
 
+Thank you for taking the time to look at my help desk example website.
+
+Thank you,
+
+Ryan Essel
 
 
 
