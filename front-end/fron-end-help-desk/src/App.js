@@ -4,7 +4,9 @@ import Navbar from './components/Navbar';
 import IssueATicket from './pages/IssueATicket';
 import TicketListViewAdmin from './pages/TicketListViewAdmin';
 import TicketDetails from './pages/TicketDetails';
+import AdminAddUser from './pages/AdminAddUser';
 import { Routes, Route} from 'react-router-dom';
+import IsPrivate from './components/IsPrivate';
 
 function App() {
   return (
@@ -16,9 +18,9 @@ function App() {
       
 
 <Route path="/issueTicket" element={<IssueATicket/>}/>
-<Route path="/allTickets" element={<TicketListViewAdmin/>}/>
+<Route path="/allTickets" element={<IsPrivate><TicketListViewAdmin/></IsPrivate>}/>
 <Route path ="/ticket/:ticketId" element={<TicketDetails/>}/>
-
+<Route path="/AdminAddSecretURL" element={<AdminAddUser/>}/>
 </Routes>
 
 

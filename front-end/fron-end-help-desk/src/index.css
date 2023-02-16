@@ -62,3 +62,29 @@ border: 1px solid black
     background-color: green;
     color: white;
   }
+
+  button {
+    background-color: #C6C6C6;
+    border: none;
+    color: #000000;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow:
+      inset 1px 1px 0 #FFFFFF,
+      inset -1px -1px 0 #C6C6C6,
+      2px 2px 0 #000000;
+    background-image: linear-gradient(to bottom, #D8D8D8, #B3B3B3);
+  }
+  
+  button:hover {
+    box-shadow:
+      inset 1px 1px 0 #FFFFFF,
+      inset -1px -1px 0 #C6C6C6,
+      0px 0px 0 #000000;
+    background-image: linear-gradient(to bottom, #EFEFEF, #CFCFCF);
+  }

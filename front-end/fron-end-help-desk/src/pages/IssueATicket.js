@@ -12,7 +12,7 @@ export default function IssueATicket() {
     <h1>Issue a Ticket</h1>
     <h3>Use the form below to issue a ticket</h3>
     
-   <div className='content center'>
+   <div className='content '>
    <TicketSubmitForm/>
     
     </div> 

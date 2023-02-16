@@ -75,7 +75,7 @@ export default function TicketDetails() {
         return
       }
 
-      setSuccessMessage(<div className='bg-green-400 text-center'>Ticket Sent!</div>)
+      setSuccessMessage(<div className='bg-green-400 text-center'>Response Sent!</div>)
       setCount(1);
       console.log({
         NAME: responseName,
@@ -91,7 +91,7 @@ export default function TicketDetails() {
           <div className='flex items-center justify-center'>
 
 
-        <div className=" border border-black w-11/12 md:w-2/3  bg-base-100  text-black  xl:w-[45rem] mb-4  mt-20 sm:mt-5 md:mt-10 ">
+        <div className="center border border-black w-11/12 md:w-2/3  bg-base-100  text-black  xl:w-[45rem] mb-4  mt-20 sm:mt-5 md:mt-10 ">
           
           
         <figure className="px-10 pt-10 text-4xl underline">
