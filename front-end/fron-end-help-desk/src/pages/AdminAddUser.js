@@ -8,17 +8,25 @@ import axios from "axios";
 const API_URL="http://localhost:5005"
 
 
+
 export default function AdminAddUser() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
     const [errorMessage, setErrorMessage] = useState(undefined);
+    const [checkRes, setCheckRes] = useState("");
+    const [successMessage, setSuccessMessage] = useState(undefined);
+   
 
-
-    const handleEmail = (e) => setEmail(e.target.value);
+    const handleEmail = (e) => {setEmail(e.target.value)};
     const handlePassword = (e) => setPassword(e.target.value);
     const handleName = (e) => setName(e.target.value);
+
+
+   
+
+   
 
 
     const handleSignupSubmit = (e) => {
@@ -34,6 +42,8 @@ export default function AdminAddUser() {
         axios
         .post(`${API_URL}/auth/signup`, requestBody)
         .then((response) => {
+        setCheckRes(response);
+        setSuccessMessage(<div className='bg-green-400 text-center'>User Succesfully added</div>);
            
         })
         .catch((error) => {
@@ -78,7 +88,7 @@ export default function AdminAddUser() {
 
    <button type="submit">Sign Up</button>
  </form>
-
+ {checkRes && <h3 className="success-message rounded">{successMessage}</h3> }
  { errorMessage && <p className="error-message">{errorMessage}</p> }
 
 

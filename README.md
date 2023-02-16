@@ -34,7 +34,7 @@ pic here
 - When you send a message succesfully you get the response like in the picutre below
 ![success](./readmepics/sucess%20send%20message.png "email success")
 - Message with email and user's name is sent to browser console.
-![response check](./readmepics/sucess%20send%20message.png "response check")
+![response check](./readmepics/response%20check.png "response check")
 
 
 5. All admin routes are protected and kick you back to the front page with the ticket submission form
@@ -43,6 +43,9 @@ pic here
 
 6. Addiing a new admin use is done by knowing the route extension to type into the browser
 - in this case you just add AdminAddSecretURL to http://localhost:3000/AdminAddSecretURL like so and it will take you to the sign up page
+![Admin User Added](./readmepics/user%20added.png "Admin User Added")
+
+
 
 
 
